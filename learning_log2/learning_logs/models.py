@@ -4,7 +4,6 @@ from django.db import models
 class Topic(models.Model):
     """A topic the user is interested in."""
     # text ve date_added adında veri tabanında 2 sütun oluşturacağız
-    opjects = None
     text = models.CharField(max_length=200)
     date_added = models.DateTimeField(auto_now_add=True)
 
@@ -25,5 +24,3 @@ class Entry(models.Model):
     def __str__(self):
         """Return a string representation of the model"""
         return f"{self.text[:50]}..."
-
-
